@@ -30,6 +30,9 @@ router
   })
   .post('/divide', (req, res) => {
     const { a, b } = req.body;
+    if (Number(b) === 0) {
+      return res.status(400).json({ error: `Unable to divide by 0.` });
+    }
     return res.status(200).json({ result: divide(a, b) });
   });
 
