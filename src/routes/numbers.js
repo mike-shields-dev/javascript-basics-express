@@ -49,6 +49,9 @@ router
     if (a === undefined || b === undefined) {
       return res.status(400).json({ error: `Parameters "a" and "b" are required.` });
     }
+    if (Number.isNaN(Number(a)) || Number.isNaN(Number(b))) {
+      return res.status(400).json({ error: `Parameters must be valid numbers.` });
+    }
     return res.status(200).json({ result: remainder(a, b) });
   });
 

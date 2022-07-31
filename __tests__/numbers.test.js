@@ -246,7 +246,7 @@ describe('/numbers', () => {
         });
     });
 
-    xit('errors if the parameters are not numbers', done => {
+    it('errors if the parameters are not numbers', done => {
       request(app)
         .post('/numbers/remainder')
         .send({ a: 'fish', b: 'chips' })
