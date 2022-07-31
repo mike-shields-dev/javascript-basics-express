@@ -191,7 +191,7 @@ describe('/numbers', () => {
   });
 
   describe('POST /remainder', () => {
-    xit('gives the remainder of dividing 18 by 5', done => {
+    it('gives the remainder of dividing 18 by 5', done => {
       request(app)
         .post('/numbers/remainder')
         .send({ a: 18, b: 5 })
