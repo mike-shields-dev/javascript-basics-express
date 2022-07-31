@@ -134,7 +134,7 @@ describe('/numbers', () => {
         });
     });
 
-    xit('divides stringified numbers', done => {
+    it('divides stringified numbers', done => {
       request(app)
         .post('/numbers/divide')
         .send({ a: '-4', b: '8' })
