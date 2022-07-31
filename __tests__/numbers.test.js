@@ -55,7 +55,7 @@ describe('/numbers', () => {
         });
     });
 
-    xit('subtracts -2 from 1', done => {
+    it('subtracts -2 from 1', done => {
       request(app)
         .get('/numbers/subtract/-2/from/1')
         .then(res => {
