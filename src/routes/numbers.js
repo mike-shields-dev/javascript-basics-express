@@ -20,6 +20,9 @@ router
   })
   .post('/multiply', (req, res) => {
     const { a, b } = req.body;
+    if (!a || !b) {
+      return res.status(400).json({ error: `Parameters "a" and "b" are required.` });
+    }
     return res.status(200).json({ result: multiply(a, b) });
   });
 
