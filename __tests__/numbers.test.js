@@ -202,7 +202,7 @@ describe('/numbers', () => {
         });
     });
 
-    xit('gives the remainder of dividing -4 by 8', done => {
+    it('gives the remainder of dividing -4 by 8', done => {
       request(app)
         .post('/numbers/remainder')
         .send({ a: '-4', b: '8' })
