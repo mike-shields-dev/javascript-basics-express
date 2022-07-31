@@ -123,7 +123,7 @@ describe('/numbers', () => {
   });
 
   describe('POST /divide', () => {
-    xit('divides two numbers', done => {
+    it('divides two numbers', done => {
       request(app)
         .post('/numbers/divide')
         .send({ a: 162, b: 3 })

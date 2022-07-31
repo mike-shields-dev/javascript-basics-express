@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { add, subtract, multiply } = require('../lib/numbers');
+const { add, subtract, multiply, divide } = require('../lib/numbers');
 
 const router = Router();
 
@@ -27,6 +27,10 @@ router
       return res.status(400).json({ error: `Parameters "a" and "b" must be valid numbers.` });
     }
     return res.status(200).json({ result: multiply(a, b) });
+  })
+  .post('/divide', (req, res) => {
+    const { a, b } = req.body;
+    return res.status(200).json({ result: divide(a, b) });
   });
 
 module.exports = router;
