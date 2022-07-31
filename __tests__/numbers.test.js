@@ -88,7 +88,7 @@ describe('/numbers', () => {
         });
     });
 
-    xit('multiplies stringified numbers', done => {
+    it('multiplies stringified numbers', done => {
       request(app)
         .post('/numbers/multiply')
         .send({ a: '-4', b: '-9' })
