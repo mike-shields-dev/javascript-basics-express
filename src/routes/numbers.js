@@ -23,6 +23,9 @@ router
     if (!a || !b) {
       return res.status(400).json({ error: `Parameters "a" and "b" are required.` });
     }
+    if (Number.isNaN(Number(a)) || Number.isNaN(Number(b))) {
+      return res.status(400).json({ error: `Parameters "a" and "b" must be valid numbers.` });
+    }
     return res.status(200).json({ result: multiply(a, b) });
   });
 
