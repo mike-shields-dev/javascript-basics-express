@@ -235,7 +235,7 @@ describe('/numbers', () => {
         });
     });
 
-    xit('errors if a parameter is missing', done => {
+    it('errors if a parameter is missing', done => {
       request(app)
         .post('/numbers/remainder')
         .send({ a: 'fish' })
