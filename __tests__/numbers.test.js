@@ -145,7 +145,7 @@ describe('/numbers', () => {
         });
     });
 
-    xit('divides 0 by a number', done => {
+    it('divides 0 by a number', done => {
       request(app)
         .post('/numbers/divide')
         .send({ a: 0, b: 10 })
