@@ -213,7 +213,7 @@ describe('/numbers', () => {
         });
     });
 
-    xit('gives the remainder of dividing 0 by a number', done => {
+    it('gives the remainder of dividing 0 by a number', done => {
       request(app)
         .post('/numbers/remainder')
         .send({ a: 0, b: 10 })
