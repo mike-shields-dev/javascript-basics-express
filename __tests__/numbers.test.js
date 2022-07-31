@@ -77,7 +77,7 @@ describe('/numbers', () => {
   });
 
   describe('POST /multiply', () => {
-    xit('multiplies two numbers', done => {
+    it('multiplies two numbers', done => {
       request(app)
         .post('/numbers/multiply')
         .send({ a: 10, b: 3 })
