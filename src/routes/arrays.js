@@ -29,7 +29,7 @@ router
     return res.status(200).json({ result: elementsStartingWithAVowel(array) });
   })
   .post('/remove-element', (req, res) => {
-    const index = req.body.index || 0;
+    const index = req.query.index || 0;
     const { array } = req.body;
     return res.status(200).json({ result: removeNthElement2(index, array) });
   });
