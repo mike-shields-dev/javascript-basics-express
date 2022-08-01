@@ -28,7 +28,7 @@ function validateBodyNumbers(req, res, next) {
 }
 
 function rejectZeroDivision(req, res, next) {
-  const { a, b } = req.body;
+  const { b } = req.body;
   if (Number(b) === 0) {
     return res.status(400).json({ error: `Unable to divide by 0.` });
   }
