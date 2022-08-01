@@ -29,7 +29,7 @@ describe('/arrays', () => {
   });
 
   describe('POST /append', () => {
-    xit('returns an array with the value appended', done => {
+    it('returns an array with the value appended', done => {
       request(app)
         .post('/arrays/append')
         .send({
