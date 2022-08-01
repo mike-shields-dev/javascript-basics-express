@@ -1,6 +1,11 @@
 const { Router } = require('express');
 
-const { getNthElement, arrayToCSVString, addToArray2 } = require('../lib/arrays');
+const {
+  getNthElement,
+  arrayToCSVString,
+  addToArray2,
+  elementsStartingWithAVowel,
+} = require('../lib/arrays');
 
 const router = Router();
 
@@ -17,6 +22,10 @@ router
   .post('/append', (req, res) => {
     const { array, value } = req.body;
     return res.status(200).json({ result: addToArray2(value, array) });
+  })
+  .post('/starts-with-vowel', (req, res) => {
+    const { array } = req.body;
+    return res.status(200).json({ result: elementsStartingWithAVowel(array) });
   });
 
 module.exports = router;
