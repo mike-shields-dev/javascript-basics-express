@@ -5,6 +5,7 @@ const {
   arrayToCSVString,
   addToArray2,
   elementsStartingWithAVowel,
+  removeNthElement2,
 } = require('../lib/arrays');
 
 const router = Router();
@@ -26,6 +27,11 @@ router
   .post('/starts-with-vowel', (req, res) => {
     const { array } = req.body;
     return res.status(200).json({ result: elementsStartingWithAVowel(array) });
+  })
+  .post('/remove-element', (req, res) => {
+    const index = req.body.index || 0;
+    const { array } = req.body;
+    return res.status(200).json({ result: removeNthElement2(index, array) });
   });
 
 module.exports = router;
